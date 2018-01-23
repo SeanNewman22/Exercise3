@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 3</title>
+    <style>
+        /*This tells my encompasing div that everything inside of it will be in a sans-serif font family, and the browser will use its default sans-serif font, I also tell the parent div to allow all inner elements to float in order to allow my "column" div to float next to the "map" div*/
+        div{
+            font-family:sans-serif;
+            float: left;
+            width:700px;
+            height:590px;
+        }
+        /*This is the top section of my web page*/
+        #header{
+            width:700px;
+            height:50px;
+            background-color:darkseagreen;
+        }
+        /*Here I make the header inside my header div to be relatively positioned so I can move the text around where I please inside of the div*/
+        #header>h2{
+            position:relative;
+            bottom: 8px;
+            left: 30px;
+        }
+        /*I load the provided image into my "map" div so that the image of the map displays on the web browser*/
+        #map{
+            width:500px;
+            height:500px;
+            background-image: url(Assignmnet1_images/map.jpg);
+        }
+        /*This is my div on the right side of the "map" div and I text align everything in the center because that is how it appears the professor aligned all the content in his div on the side*/
+        #column{
+            width:200px;
+            height:500px;
+            background-color: lightpink;
+            text-align: center;
+            font-size: 15px;
+        }
+        /*I decided to not use a h- tag in my "column" div but instead made a paragraph with bolded text which I define below*/
+        #column>#title{
+            font-weight: bold;
+        }
+        /*Buttons were too closely packed for my liking so I increased the margins surrounding the buttons*/
+        button{
+            margin:3px;
+        }
+        /*Same as my "header" div except the height has been reduced by 10 pixels because it appears that the bottom div on the professors page is smaller than the top div*/
+        #footer{
+            width:700px;
+            height:40px;
+            background-color:darkgoldenrod;
+            text-align: center;
+            
+        }
+        /*Properly positioning the copyright statement in the bottom div*/
+        #footer>#Copyright{
+            position: relative;
+            bottom: 20px;
+        }
+        /*had to use absolute positioning on the sprite div in order to position it on top of other divs and in the exact spot I wanted it to be in*/
+        #character{
+            background-image:url(Assignmnet1_images/sprite.png);
+            width: 64px;
+            height: 64px;
+            position:absolute;
+            top:220px;
+            left:190px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="header">
+            <h2>Grand Hawaiian Tour</h2>
+        </div>
+        <div id="map">
+    
+        </div>
+        <div id="column">
+            <p id="title">Column o' buttons</p>
+            <p>This is an awesome game!</p>
+            <button>Click to play</button>
+            <button>Toss in the towel</button>
+        </div>
+        <div id="footer">
+            <h5 id="Copyright">Copyright &copy; BC Game Demons</h5>
+        </div>
+        <div id="character">
+        </div>
+    </div>
+</body>
+</html>
